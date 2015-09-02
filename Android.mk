@@ -20,9 +20,9 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),q39)
+ifeq ($(TARGET_DEVICE),N939St)
 
-include device/tcl/q39/kernel/AndroidKernel.mk
+include device/zte/N939St/kernel/AndroidKernel.mk
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

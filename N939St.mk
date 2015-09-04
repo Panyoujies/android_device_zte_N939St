@@ -327,7 +327,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.carrier=unknown \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=60 \
-    persist.sys.usb.config=mtp \
     ro.com.google.clientidbase=android-tcl \
     ro.com.google.clientidbase.ms=android-tcl \
     ro.com.google.clientidbase.am=android-tcl \

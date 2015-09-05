@@ -323,15 +323,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=512m
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    camera2.portability.force_api=1 \
     keyguard.no_require_sim=true \
     ro.carrier=unknown \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=60 \
-    ro.com.google.clientidbase=android-tcl \
-    ro.com.google.clientidbase.ms=android-tcl \
-    ro.com.google.clientidbase.am=android-tcl \
-    ro.com.google.clientidbase.gmm=android-tcl \
-    ro.com.google.clientidbase.yt=android-tcl \
+    ro.com.google.clientidbase=android-zte \
+    ro.com.google.clientidbase.ms=android-zte \
+    ro.com.google.clientidbase.am=android-zte \
+    ro.com.google.clientidbase.gmm=android-zte \
+    ro.com.google.clientidbase.yt=android-zte \
     ro.com.android.dataroaming=true
 
 # Wifi

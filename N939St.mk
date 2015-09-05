@@ -324,6 +324,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1 \
+    ro.sf.lcd_density=456 \
     keyguard.no_require_sim=true \
     ro.carrier=unknown \
     wifi.interface=wlan0 \

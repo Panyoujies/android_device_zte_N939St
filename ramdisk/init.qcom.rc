@@ -288,6 +288,9 @@ on post-fs-data
     chmod 2770 /data/system/perfd
     mkdir /persist/drm 0770 system system
 
+    chown system system /sys/class/mmc_host/mmc1/detection
+    chmod 0777 /sys/class/mmc_host/mmc1/detection
+
 #add by xianyanming for nfc      date:2015/05/09    Start
     # NFC local data and nfcee xml storage
     # mkdir /data/nfc 0770 nfc nfc

@@ -365,4 +365,4 @@ PRODUCT_COPY_FILES += \
 # call the proprietary setup
 #$(call inherit-product, vendor/zte/N939St/q39-vendor.mk)
 
-#$(call inherit-product, device/zte/N939St/vendor/copyfiles.mk)
+$(call inherit-product, device/zte/N939St/vendor/copyfiles.mk)

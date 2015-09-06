@@ -66,7 +66,7 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ramdisk/sbin/healthd:root/res/sbin/healthd \
+    $(LOCAL_PATH)/ramdisk/sbin/healthd:root/sbin/healthd \
     $(LOCAL_PATH)/ramdisk/res/images/charger/battery_fail.png:root/res/images/charger/battery_fail.png \
     $(LOCAL_PATH)/ramdisk/res/images/charger/battery_level_720p_0.png:root/res/images/charger/battery_level_720p_0.png \
     $(LOCAL_PATH)/ramdisk/res/images/charger/battery_level_720p_1.png:root/res/images/charger/battery_level_720p_1.png \
@@ -207,7 +207,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml
 
-	# etc
+# etc
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/etc/apns-conf.xml:system/etc/apns-conf.xml \
     $(LOCAL_PATH)/etc/clatd.conf:system/etc/clatd.conf \
@@ -296,7 +296,7 @@ PRODUCT_BOOT_JARS += qcom.fmradio
 PRODUCT_PACKAGES += \
     power.msm8916
 
-# QC PROPRIETARY ( proprietary wifi display, if available)
+# QC 
 ifneq ($(QCPATH),)
 PRODUCT_BOOT_JARS += WfdCommon
 
@@ -361,8 +361,5 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat
-
-# call the proprietary setup
-#$(call inherit-product, vendor/zte/N939St/q39-vendor.mk)
 
 $(call inherit-product, device/zte/N939St/vendor/copyfiles.mk)

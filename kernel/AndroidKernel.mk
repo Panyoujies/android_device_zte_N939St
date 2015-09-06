@@ -9,7 +9,7 @@ KERNEL_CONFIG := $(LOCAL_PRIVATE_PATH)/user/.config
 TARGET_PREBUILT_INT_KERNEL := $(KERNEL_OUT)/arch/arm64/boot/zImage
 KERNEL_HEADERS_INSTALL := $(KERNEL_OUT)/usr
 KERNEL_MODULES_INSTALL := system
-KERNEL_MODULES_OUT := $(TARGET_OUT)/lib/modules
+KERNEL_MODULES_OUT := $(TARGET_OUT)/lib64/modules
 KERNEL_IMG=$(KERNEL_OUT)/arch/arm64/boot/Image
 
 KERNEL_USE_OF ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_USE_OF=y/) { $$of = "y"; break; } } print $$of;' $(LOCAL_PRIVATE_PATH)/user/.config)
@@ -17,7 +17,7 @@ KERNEL_USE_OF ?= $(shell $(PERL) -e '$$of = "n"; while (<>) { if (/CONFIG_USE_OF
 ifeq "$(KERNEL_USE_OF)" "y"
 
 define append-dtb
-cp $(LOCAL_PRIVATE_PATH)/dt.img $(OUT)/dt.img
+cp $device/zte/N939St/kernel/dt.img $(OUT)/dt.img
 endef
 else
 
@@ -26,7 +26,7 @@ endef
 endif
 
 ifeq ($(TARGET_USES_UNCOMPRESSED_KERNEL),true)
-$(info Using uncompressed kernel)
+#$(info Using uncompressed kernel)
 #TARGET_PREBUILT_KERNEL := $(KERNEL_OUT)/piggy
 #else
 TARGET_PREBUILT_KERNEL := $(TARGET_PREBUILT_INT_KERNEL)

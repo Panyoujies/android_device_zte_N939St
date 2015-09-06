@@ -18,8 +18,6 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-
-
 #Create symbolic links
 $(shell mkdir -p $(TARGET_OUT)/vendor/lib; \
         rm $(TARGET_OUT)/vendor/lib/libEGL_adreno.so; \
@@ -30,3 +28,9 @@ $(shell mkdir -p $(TARGET_OUT)/vendor/lib64; \
         rm $(TARGET_OUT)/vendor/lib64/libEGL_adreno.so; \
         ln -sf /system/vendor/lib64/egl/libEGL_adreno.so \
         $(TARGET_OUT)/vendor/lib64/libEGL_adreno.so)
+
+#Create symbolic links
+$(shell mkdir -p $(TARGET_OUT)/lib/modules; \
+        rm $(TARGET_OUT)/lib/modules/wlan.ko; \
+        ln -sf /system/lib/modules/pronto/pronto_wlan.ko \
+        $(TARGET_OUT)/lib/modules/wlan.ko)

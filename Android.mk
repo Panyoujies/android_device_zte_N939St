@@ -25,7 +25,4 @@ ifeq ($(TARGET_DEVICE),N939St)
 include device/zte/N939St/kernel/AndroidKernel.mk
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
-
-include $(CLEAR_VARS)
-
 endif
